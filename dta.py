@@ -1,6 +1,6 @@
 import sys
 
-if sys.version_info[0] == 3: # Python 3
+if sys.version_info[0] >= 3: # Python 3 or higher
 	class ConvertedDict(object):
 		def __init__(self, data):
 			for name, value in data.items():
