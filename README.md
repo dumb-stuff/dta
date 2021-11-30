@@ -11,7 +11,7 @@ No need dependencies required so your repository size won't go to hell.
 
 ## Installation
 
-Use pip
+Use pip to install [package](https://pypi.org/project/dta)
 ```bash
 pip install dta
 ```
