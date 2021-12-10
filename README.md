@@ -30,7 +30,8 @@ import dta
 For converting to attributes do
 ```py
 import dta 
-dta.Dict2Attr({"stuff":["balls","watch anime girls","OwO"]})
+SomeCoolConvertedDictToAttributes = dta.Dict2Attr({"stuff":["balls","watch anime girls","OwO"]})
+SomeCoolConvertedDictToAttributes.stuff[1]
 ```
 For converting attributes back to dict for saving purpose do
 ```py
