@@ -12,7 +12,7 @@ if sys.version_info[0] >= 3: # Python 3 or higher
 			else:
 				return ConvertedDict(value) if isinstance(value, dict) else value
 	
-	def Dict2Attr(data : object = None):
+	def Dict2Attr(data = None):
 		for name, value in data.items():
 			if " " in name:
 				raise ValueError("Attribute name cannot contain space: {}".format(name))
@@ -31,13 +31,13 @@ else: # Python 2
 				return type(value)([self._wrap(v) for v in value])
 			else:
 				return ConvertedDict(value) if isinstance(value, dict) else value
-	def Dict2Attr(data : dict = None):
+	def Dict2Attr(data = None):
 		for name, value in data.iteritems():
 			if " " in name:
 				raise ValueError("Attribute name cannot contain space: {}".format(name))
 		return ConvertedDict(data)
 
-def Attr2Dict(data : object = None):
+def Attr2Dict(data = None):
 	if isinstance(data, ConvertedDict):
 		return data.__dict__
 	else:
