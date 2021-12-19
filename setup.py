@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="dta",
-    version="1.2.0",
+    version="1.2.1",
     author="Rukchad Wongprayoon",
     author_email="contact@biomooping.tk",
     description="dta Convert Dict To Attributes!",
@@ -15,5 +15,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=2.7",
+    python_requires=">=2",
 )
