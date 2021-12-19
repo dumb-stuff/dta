@@ -1,0 +1,35 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Python package
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+
+    runs-on: [ubuntu-latest, macos-latest, windows-latest]
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["2.x","3.x","pypy-2.x","pypy-3.x"]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Make virtual enviroment
+    - run: |
+        python -m venv .
+    - name: Install shits
+    - run: |
+        ./Scripts/pip install pytest
+    - name: Run test
+    - run: |
+        ./Scripts/pytest
