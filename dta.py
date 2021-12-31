@@ -104,3 +104,11 @@ def Attr2Dict(data = None):
 		return data.__dict__
 	else:
 		raise TypeError("Expected __ConvertedDict, got {}".format(type(data)))
+
+del sys
+
+__all__ = {
+	"Dict2Attr": Dict2Attr,
+	"Attr2Dict": Attr2Dict,
+	"ConvertedDict": ConvertedDict,
+}
