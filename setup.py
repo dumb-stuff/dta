@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="dta",
-    version="1.3.0",
+    version="1.3.1",
     author="Rukchad Wongprayoon",
     author_email="contact@biomooping.tk",
     description="dta Convert Dict To Attributes!",
