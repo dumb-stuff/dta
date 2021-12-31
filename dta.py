@@ -110,5 +110,5 @@ del sys
 __all__ = {
 	"Dict2Attr": Dict2Attr,
 	"Attr2Dict": Attr2Dict,
-	"ConvertedDict": ConvertedDict,
+	"__ConvertedDict": __ConvertedDict,
 }
